@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+struct book   //Define the structure type
+{
+	char name[20];
+	short price;
+
+};   //A semicolon is indispensable
+int main()
+{
+	struct book b1 = { "C语言程序设计",55 };// Create a structure variable b1 with the structure type
+	struct book* pb = &b1;//pinter variable  void varaddr
+	strcpy(b1.name, "C语言");//Change book name strcpy--string  copy;
+	 b1.price= 15;//    structyre.member
+	//printf("%d\n", b1.price);
+	printf("价格：%d\n", pb->price);//pointer->member
+	printf("书名：%s\n", pb->name);
+	return 0;
+}
